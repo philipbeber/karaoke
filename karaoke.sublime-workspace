@@ -1,0 +1,1105 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"scr",
+				"scrollTop"
+			],
+			[
+				"curr",
+				"currentSong"
+			],
+			[
+				"cu",
+				"currentSong"
+			],
+			[
+				"sc",
+				"scrollTop"
+			],
+			[
+				"clo",
+				"clockwiseClick"
+			],
+			[
+				"in",
+				"inputControls"
+			],
+			[
+				"ren",
+				"renderControls"
+			],
+			[
+				"input",
+				"inputControls"
+			],
+			[
+				"Inpu",
+				"InputControls"
+			],
+			[
+				"con",
+				"controlsTemplate"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"new",
+				"newPart"
+			],
+			[
+				"song",
+				"songTemplate"
+			],
+			[
+				"list",
+				"listenTo"
+			],
+			[
+				"start",
+				"startOfWord"
+			],
+			[
+				"_page",
+				"_pageNumEditModel"
+			],
+			[
+				"PageNu",
+				"_pageNumEditModel"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"previo",
+				"previousValue"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"defaul",
+				"defaultPosition"
+			],
+			[
+				"pages",
+				"_pages"
+			],
+			[
+				"_pag",
+				"_pages"
+			],
+			[
+				"temp",
+				"templateJson"
+			],
+			[
+				"_Cur",
+				"_currentPage"
+			],
+			[
+				"_cur",
+				"_currentPage"
+			],
+			[
+				"_pa",
+				"_pageCount"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 45,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/index.html",
+			"settings":
+			{
+				"buffer_size": 2655,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/PBeber/todomvc/examples/backbone/index.html",
+			"settings":
+			{
+				"buffer_size": 2285,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/index.css",
+			"settings":
+			{
+				"buffer_size": 8681,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/app.js",
+			"settings":
+			{
+				"buffer_size": 197,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/models/songs.js",
+			"settings":
+			{
+				"buffer_size": 2841,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/models/song.js",
+			"settings":
+			{
+				"buffer_size": 527,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/routers/router.js",
+			"settings":
+			{
+				"buffer_size": 736,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 77282 files for \"TodoRouter\" (case sensitive)\n\n\n\nSearching 26 files for \"TodoRouter\" (case sensitive)\n\n/Users/PBeber/karaoke/www/js/routers/router.js:\n    7  	// Todo Router\n    8  	// ----------\n    9: 	var TodoRouter = Backbone.Router.extend({\n   10  		routes: {\n   11  			'*filter': 'setFilter'\n   ..\n   22  	});\n   23  \n   24: 	app.TodoRouter = new TodoRouter();\n   25  	Backbone.history.start();\n   26  })();\n\n3 matches in 1 file\n\n\nSearching 26 files for \"TodoFilter\" (case sensitive)\n\n/Users/PBeber/karaoke/www/js/routers/router.js:\n   14  		setFilter: function (param) {\n   15  			// Set the current filter to be used\n   16: 			app.TodoFilter = param || '';\n   17  \n   18  			// Trigger a collection filter event, causing hiding/unhiding\n\n/Users/PBeber/karaoke/www/js/views/app-view.js:\n   64  				this.$('.filters li a')\n   65  					.removeClass('selected')\n   66: 					.filter('[href=\"#/' + (app.TodoFilter || '') + '\"]')\n   67  					.addClass('selected');\n   68  			} else {\n\n/Users/PBeber/karaoke/www/js/views/todo-view.js:\n   62  		isHidden: function () {\n   63  			return this.model.get('completed') ?\n   64: 				app.TodoFilter === 'active' :\n   65: 				app.TodoFilter === 'completed';\n   66  		},\n   67  \n\n4 matches across 3 files\n\n\nSearching 26 files for \"'filter'\" (case sensitive)\n\n/Users/PBeber/karaoke/www/js/routers/router.js:\n   18  			// Trigger a collection filter event, causing hiding/unhiding\n   19  			// of Todo view items\n   20: 			app.todos.trigger('filter');\n   21  		}\n   22  	});\n\n/Users/PBeber/karaoke/www/js/views/app-view.js:\n   38  			this.listenTo(app.todos, 'reset', this.addAll);\n   39  			this.listenTo(app.todos, 'change:completed', this.filterOne);\n   40: 			this.listenTo(app.todos, 'filter', this.filterAll);\n   41  			this.listenTo(app.todos, 'all', _.debounce(this.render, 0));\n   42  \n\n/Users/PBeber/karaoke/www/node_modules/backbone/backbone.js:\n  979      // `filter`.\n  980      where: function(attrs, first) {\n  981:       return this[first ? 'find' : 'filter'](attrs);\n  982      },\n  983  \n\n/Users/PBeber/karaoke/www/node_modules/jquery/dist/jquery.js:\n 5558  \n 5559  	// Support: IE9\n 5560: 	// getPropertyValue is only needed for .css('filter') (#12537)\n 5561  	if ( computed ) {\n 5562  		ret = computed.getPropertyValue( name ) || computed[ name ];\n\n4 matches across 4 files\n\n\nSearching 26 files for \"'visible'\" (case sensitive)\n\n/Users/PBeber/karaoke/www/js/views/app-view.js:\n   88  \n   89  		filterOne: function (todo) {\n   90: 			todo.trigger('visible');\n   91  		},\n   92  \n\n/Users/PBeber/karaoke/www/js/views/todo-view.js:\n   33  			this.listenTo(this.model, 'change', this.render);\n   34  			this.listenTo(this.model, 'destroy', this.remove);\n   35: 			this.listenTo(this.model, 'visible', this.toggleVisible);\n   36  		},\n   37  \n\n2 matches across 2 files\n\n\nSearching 26 files for \"'filter'\" (case sensitive)\n\n/Users/PBeber/karaoke/www/js/views/app-view.js:\n   38  			this.listenTo(app.todos, 'reset', this.addAll);\n   39  			this.listenTo(app.todos, 'change:completed', this.filterOne);\n   40: 			this.listenTo(app.todos, 'filter', this.filterAll);\n   41  			this.listenTo(app.todos, 'all', _.debounce(this.render, 0));\n   42  \n\n/Users/PBeber/karaoke/www/node_modules/backbone/backbone.js:\n  979      // `filter`.\n  980      where: function(attrs, first) {\n  981:       return this[first ? 'find' : 'filter'](attrs);\n  982      },\n  983  \n\n/Users/PBeber/karaoke/www/node_modules/jquery/dist/jquery.js:\n 5558  \n 5559  	// Support: IE9\n 5560: 	// getPropertyValue is only needed for .css('filter') (#12537)\n 5561  	if ( computed ) {\n 5562  		ret = computed.getPropertyValue( name ) || computed[ name ];\n\n3 matches across 3 files\n\n\nSearching 25 files for \"currentSong\" (case sensitive)\n\n/Users/PBeber/karaoke/www/js/models/songs.js:\n   29  \n   30  			_.defer(function() {\n   31: 				if (!app.currentSong)\n   32  				{\n   33  					var firstSong = Math.floor(Math.random() * app.songs.length) + 1;\n\n/Users/PBeber/karaoke/www/js/routers/router.js:\n   21  		setSong: function (param) {\n   22  			// Set the current filter to be used\n   23: 			app.currentSong = param || 1;\n   24  \n   25: 			app.songs.trigger('currentSong');\n   26  		}\n   27  	});\n\n/Users/PBeber/karaoke/www/js/views/app-view.js:\n   35  			this.$scrollContainer = $('body');\n   36  \n   37: 			this.listenTo(app.songs, 'currentSong', _.debounce(this.renderSong.bind(this), 0));\n   38: 			app.songs.trigger('currentSong');\n   39  \n   40  			app.inputControls.on('all', _.debounce(this.renderControls.bind(this)));\n   ..\n   48  		// of the app doesn't change.\n   49  		renderSong: function () {\n   50: 			if (app.currentSong) {\n   51: 				var song = app.songs.at(app.currentSong - 1);\n   52  				this.$main.html(this.songTemplate({\n   53  					song: song\n   ..\n   80  		clockwiseClick: function() {\n   81  			if (app.inputControls.get('inScanMode')) {\n   82: 				var nextSong = app.currentSong + 1;\n   83  				if (nextSong >= app.songs.length) {\n   84  					nextSong = 1;\n\n8 matches across 3 files\n",
+			"settings":
+			{
+				"buffer_size": 5031,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "www/js/views/app-view.js",
+			"settings":
+			{
+				"buffer_size": 4539,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "/*global Backbone */\nvar app = app || {};\n\n(function () {\n	'use strict';\n\n	// Input Controls Model\n	// ----------\n\n	// Our basic **Chord** model has `title`, `order`, and `completed` attributes.\n	var InputControls = Backbone.Model.extend({\n		// Default attributes for the chord\n		// and ensure that each chord created has `title` and `completed` keys.\n		defaults: {\n			showControls: false,\n			inScanMode: false,\n		},\n\n	});\n\n	app.inputControls = new InputControls();\n})();\n",
+			"file": "www/js/models/inputControls.js",
+			"file_size": 470,
+			"file_write_time": 130919495810000000,
+			"settings":
+			{
+				"buffer_size": 472,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/node_modules/backbone/backbone.js",
+			"settings":
+			{
+				"buffer_size": 71365,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/models/line.js",
+			"settings":
+			{
+				"buffer_size": 478,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/models/chord.js",
+			"settings":
+			{
+				"buffer_size": 391,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/songs.txt",
+			"settings":
+			{
+				"buffer_size": 2773,
+				"line_ending": "Unix",
+				"name": "##Title"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/PBeber/karaoke",
+		"/Users/PBeber/karaoke/www",
+		"/Users/PBeber/karaoke/www/js",
+		"/Users/PBeber/karaoke/www/js/models",
+		"/Users/PBeber/karaoke/www/js/routers",
+		"/Users/PBeber/karaoke/www/js/views"
+	],
+	"file_history":
+	[
+		"/Users/PBeber/karaoke/karaoke.sublime-project",
+		"/Users/PBeber/karaoke/LICENSE",
+		"/Users/PBeber/karaoke/www/js/collections/todos.js",
+		"/Users/PBeber/todomvc/index.html",
+		"/Users/PBeber/karaoke/www/js/views/todo-view.js",
+		"/Users/PBeber/karaoke/www/js/models/todo.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"-app.min.*,-firepad-icomoon.json,/Users/PBeber/karaoke",
+			"-app.min.*,-firepad-icomoon.json,/Users/PBeber/fuze",
+			"-app.min.*,-firepad-icomoon.json,/Users/PBeber/fuze/Clients/Shared/contentRendering",
+			"/Users/PBeber/fuze/Clients/html5,-app.min.*,-firepad-icomoon.json",
+			"/Users/PBeber/fuze,-app.min.*,-firepad-icomoon.json",
+			"/Users/PBeber/lmw,-app.min.*,-firepad-icomoon.json",
+			"/Users/PBeber/lmw,-app.min.*",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"currentSong",
+			"line-height",
+			"app.songs",
+			"songList",
+			"'filter'",
+			"'visible'",
+			"filterAll",
+			"'filter'",
+			"TodoFilter",
+			"TodoRouter",
+			"linePart",
+			"LinePart",
+			"Todo",
+			"todo",
+			"Todo",
+			"todo",
+			"/*",
+			"todo",
+			"Todo",
+			"Invalid file type",
+			"addSpacesMediaToMeeting",
+			"console.error",
+			"ucapi",
+			"parseSlideMenuLabel",
+			"getTotalSlides",
+			"validState",
+			"sendSlideViewPosition",
+			"sendSlideViewPositionStart",
+			"sendSlideViewPosition",
+			"sendSlideViewPositionStart",
+			"\"status\"",
+			"event",
+			"parent",
+			"loadTimedout",
+			"iframeLoadTimer",
+			"reloadTimeoutId",
+			"iframeLoadTime",
+			"timeout",
+			"receiveMessage",
+			"handleStateEvent",
+			"webAppsReloadedSuccessfully",
+			"dispatchEvent",
+			"initialize",
+			"loadSucceeded",
+			"reloadTimeoutId",
+			"sendReloadMessage",
+			"initial load",
+			"reloadTimeoutId",
+			"sendReloadMessage",
+			"iframeLoadTimer",
+			"loadTimedout",
+			"setErrorFlagAndTryReload",
+			"loadTimedout",
+			"iframeLoadTimer",
+			"reloadTimeoutId",
+			"iframeLoadTimer",
+			"loadTimedout",
+			"\\.toolbar \\.bar.*li",
+			"toolbar.*>li",
+			".toolbar.*>li",
+			".toolbar.*\\>li",
+			".toolbar.*>li",
+			".toolbar.viewer.*>li",
+			".toolbar.viewer.*li",
+			".toolbar.viewer",
+			".toolbar",
+			".button",
+			"toolbar-pagenumedit",
+			"tpl-toolbar-bar",
+			"dropdown-toggle",
+			"template",
+			"dropdown-toggle",
+			"dropdown-toggle <%= css %>\"",
+			"createTypedView",
+			"this.toolbar",
+			".bc5",
+			".toolbar.viewer",
+			".toolbar .bar .name",
+			".feed-view .input-container",
+			".button",
+			"'.toolbar'",
+			"tpl-workspace-workspace-view",
+			"workspace-toolbar",
+			"\"Edit\"",
+			"join-container",
+			"e635",
+			"e00f",
+			".page",
+			"page",
+			"e0bd",
+			"fuze-meeting",
+			"},\n",
+			"gotoPage",
+			"position",
+			"_book",
+			"change:",
+			"panels",
+			"onConditionChange",
+			"LiveColl",
+			"Doc.Comment",
+			"_link",
+			"nextNumber",
+			"lm.Model.extend",
+			"Position",
+			"Model =",
+			"lm.LiveModel.extend",
+			"WIDTH",
+			"PAGE_STORE.WIDTH",
+			"Doc.PageCollection",
+			"pagesRef",
+			"dataRef",
+			"commentsRef",
+			"FUZETOKEN",
+			"CFG.FUZETOKEN",
+			"el.parent",
+			"hide()",
+			"gotoPage",
+			"this.$el",
+			"_boards",
+			"width",
+			"'board",
+			"'.board",
+			".board",
+			"tpl-boards-board",
+			"Board.View",
+			"subviews",
+			"boardsListView",
+			"gotoPage"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"app.songs",
+			"KaraokeRouter",
+			"chord",
+			"Chord",
+			"LinePart",
+			"linePart",
+			"line",
+			"Line",
+			"Song",
+			"song",
+			"Song",
+			"/Users/pbeber/logs",
+			"/User/pbeber/logs"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 9,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 45,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "www/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2655,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1183,
+								1196
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 133.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/PBeber/todomvc/examples/backbone/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2285,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 41.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "www/index.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8681,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8678,
+								8678
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 7533.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "www/js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 197,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								193,
+								193
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "www/js/models/songs.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2841,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								681,
+								818
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 187.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "www/js/models/song.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 527,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								385,
+								385
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "www/js/routers/router.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 736,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								607,
+								607
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5031,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										218,
+										228
+									],
+									[
+										346,
+										356
+									],
+									[
+										363,
+										373
+									],
+									[
+										649,
+										659
+									],
+									[
+										915,
+										925
+									],
+									[
+										1140,
+										1150
+									],
+									[
+										1181,
+										1191
+									],
+									[
+										1489,
+										1497
+									],
+									[
+										1737,
+										1745
+									],
+									[
+										2014,
+										2022
+									],
+									[
+										2201,
+										2209
+									],
+									[
+										2514,
+										2523
+									],
+									[
+										2753,
+										2762
+									],
+									[
+										3098,
+										3106
+									],
+									[
+										3375,
+										3383
+									],
+									[
+										3562,
+										3570
+									],
+									[
+										3865,
+										3876
+									],
+									[
+										4116,
+										4127
+									],
+									[
+										4179,
+										4190
+									],
+									[
+										4355,
+										4366
+									],
+									[
+										4442,
+										4453
+									],
+									[
+										4646,
+										4657
+									],
+									[
+										4700,
+										4711
+									],
+									[
+										4915,
+										4926
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								3705,
+								3705
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 7,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1870.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "www/js/views/app-view.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4539,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2398,
+								2398
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 769.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "www/js/models/inputControls.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 472,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								418,
+								418
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "www/node_modules/backbone/backbone.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 71365,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								28052,
+								28052
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 10905.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "www/js/models/line.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 478,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								325,
+								325
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "www/js/models/chord.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 391,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								379,
+								379
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "www/songs.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2773,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								68,
+								37
+							]
+						],
+						"settings":
+						{
+							"auto_name": "##Title",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 692.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "karaoke.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 290.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
