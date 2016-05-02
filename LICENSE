@@ -1,5 +1,7 @@
 The MIT License (MIT)
 
+Applies to everything except data under the /app/data/chordpro directory.
+
 Copyright (c) 2015 Philip Beber
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
