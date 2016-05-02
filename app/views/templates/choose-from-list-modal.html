@@ -1,0 +1,14 @@
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">{{ title }}</h4>
+      </div>
+
+      <div class="modal-body choose-body">
+        <p ng-repeat="item in list" ng-class="{ 'selected-row': item.isSelected}" scroll-if="item.isSelected">{{item[nameProperty]}}</p>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Artist</h4>
+      </div>
+
+      <div class="modal-body">
+        <div ng-repeat="artist in artists">
+          <p ng-class="{ 'selected-row': artist.isSelected}">{{artist.artist}}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

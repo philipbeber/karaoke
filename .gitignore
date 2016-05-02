@@ -1,4 +1,7 @@
 /node_modules
-/bower_components
 /dist
-/tooling/node_modules
+/.tmp
+/.sass-cache
+/bower_components
+
+.idea/

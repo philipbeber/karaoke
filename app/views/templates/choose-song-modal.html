@@ -1,0 +1,16 @@
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">{{selectedArtist.artist}}</h4>
+      </div>
+
+      <div class="modal-body choose-body">
+        <div ng-repeat="song in selectedArtist.songs">
+          <p ng-class="{ 'selected-row': song.isSelected}">{{song.title}}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
