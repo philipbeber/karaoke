@@ -1,12 +1,30 @@
 # Campfire Karaoke
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
+The campfire karaoke machine is a small device which displays lyrics and chords to aid singalongs around a fire.
 
-## Build & development
+## To run locally for testing purposes
 
-Run `grunt` for building and `grunt serve` for preview.
+Install NPM: https://www.npmjs.com/
 
-## Testing
+`npm install -g bower grunt-cli`
+`npm install`
+`bower install`
+`grunt serve`
 
-Running `grunt test` will run the unit tests with karma.
+Press 'X' to simulate clicking the hardware button.
+Press 'N' to simulate anti-clockwise scroll.
+Press 'M' to simulate clockwise scroll.
+
+## Actual setup
+
+You will need:
+
+- Raspberry Pi 2
+- Projector
+- Rotary encoder with push button (https://www.adafruit.com/products/377)
+- White sheet
+- Guitar
+- Firewood
+
+..TODO..
+
