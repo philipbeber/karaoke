@@ -73,11 +73,16 @@ angular.module('kimeokeApp')
     }
 
     function parseMetadata(line) {
-      var matches = line.match(/{([^:}]+)(:([^}]+))?}/);
-      return {
-        name: matches[1],
-        value: matches[3]
-      };
+      try {
+        var matches = line.match(/{([^:}]+)(:([^}]*))?}/);
+        return {
+          name: matches[1],
+          value: matches[3]
+        };
+      }
+      catch(err) {
+        throw new Error('Error getting metadata from: ' + line + ': ' + err);
+      }
     }
 
     function parseLine(song, line) {

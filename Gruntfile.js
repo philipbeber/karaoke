@@ -220,7 +220,7 @@ module.exports = function (grunt) {
             }
           }
       }
-    }, 
+    },
 
     // Renames files for browser caching purposes
     filerev: {
@@ -380,7 +380,9 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '*.html',
             'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*'
+            'styles/fonts/{,*/}*.*',
+            'data/*.json',
+            'data/**/*.chopro'
           ]
         }, {
           expand: true,
