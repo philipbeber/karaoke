@@ -17,7 +17,6 @@ lxterminal --command="sudo python rotary_to_keypress.py" --title="GPIO"
 # start the webserver
 cd ../dist
 lxterminal --command="python -m SimpleHTTPServer" --title="Webserver"
-# --working-directory="$(dirname "$0")/../dist"
 
 sleep 2
 
