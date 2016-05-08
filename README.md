@@ -2,10 +2,14 @@
 
 The campfire karaoke machine is a small device which displays lyrics and chords to aid singalongs around a fire.
 
+Turning the dial scrolls the page up and down. Clicking the button enters the song selection mode. Keep clicking and turning the dial to select a new song.
+
 ## To run locally for testing purposes
 
 Install NPM: https://www.npmjs.com/
 
+`git clone <urlofkaraoke>`
+`cd karaoke`
 `npm install -g bower grunt-cli`
 `npm install`
 `bower install`
@@ -29,6 +33,8 @@ You will need:
 On the rotary encoder one side has three legs and the other has two. On the side with three legs connect the middle leg to ground. Connect the left leg to pin 8 (Broadcom numbering) and the right leg to pin 7.
 
 On the side with two legs connect one leg to ground and the other to pin 2. Doesn't matter which way round they are connected.
+
+Clone the karaoke repo.
 
 Run `pi/setup-pi.sh`
 
