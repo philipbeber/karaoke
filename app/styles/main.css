@@ -82,8 +82,22 @@ body {
   }
 }
 
+h4 {
+  font-size: 32px;
+}
+
+.choose-list-row {
+  font-size: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: white;
+}
+
 .selected-row {
   background-color: #d1d1d1;
+  border-color: darkgray;
 }
 
 body {
@@ -92,7 +106,9 @@ body {
   background: white;
   color: #4d4d4d;
   min-width: 230px;
-  max-width: 1050px;
+  /* max-width: 1050px; */
+  padding-left: 60px;
+  padding-right: 60px;
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;

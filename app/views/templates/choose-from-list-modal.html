@@ -6,7 +6,7 @@
       </div>
 
       <div class="modal-body choose-body">
-        <p ng-repeat="item in list" ng-class="{ 'selected-row': item.isSelected}" scroll-if="item.isSelected">{{item[nameProperty]}}</p>
+        <p ng-repeat="item in list" class="choose-list-row" ng-class="{ 'selected-row': item.isSelected}" scroll-if="item.isSelected">{{item[nameProperty]}}</p>
       </div>
 
     </div>
