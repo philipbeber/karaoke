@@ -29,7 +29,7 @@
         <div class="view">
           <div class="line" ng-repeat="line in selectedSong.lines">
             <div class="chords">
-              <div class="chord" ng-repeat="chord in line" ng-bind-html="chord.chord"></div>
+              <div ng-class="chord.chordClass" ng-repeat="chord in line" ng-bind-html="chord.chord"></div>
             </div>
             <div class="lyrics">
               <div class="lyric" ng-repeat="chord in line" ng-bind-html="chord.lyric"></div>

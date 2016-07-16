@@ -21,8 +21,10 @@ angular.module('kimeokeApp')
             var title = song.slice(lastSlash + 1, firstDot);
             // Insert space before each upper-case letter
             for(var i = title.length - 1; i > 0; i--) {
-              if (title[i].toUpperCase() === title[i]) {
+              if (title[i].toUpperCase() === title[i] && title[i - 1 !== '_']) {
                 title = title.slice(0, i) + ' ' + title.slice(i);
+              } else if (title[i] === '_') {
+                title = title.slice(0, i) + ' ' + title.slice(i + 1);
               }
             }
 
@@ -87,6 +89,7 @@ angular.module('kimeokeApp')
 
     function parseLine(song, line) {
       line = line.trim();
+      var isInline = false;
 
       // Parse metadata
       if (line.slice(0, 1) === '{') {
@@ -98,8 +101,12 @@ angular.module('kimeokeApp')
           song.subtitle = metadata.value;
         }
 
-        // Ignore unrecognized metadata
-        return;
+        if (metadata.name !== 'inline') {
+          return;
+        }
+
+        line = line.slice('{inline}'.length);
+        isInline = true;
       }
 
       if (line.charAt(0) === '#') {
@@ -112,20 +119,20 @@ angular.module('kimeokeApp')
       var startOfWord = 0, inChord = false;
       for (var i = 0; i < line.length; i++) {
         if (line.charAt(i) === '[') {
-          flushLine(line, startOfWord, i, inChord, lineObj);
+          flushLine(line, startOfWord, i, inChord, lineObj, isInline);
           inChord = true;
           startOfWord = i + 1;
         } else if (line.charAt(i) === ']') {
-          flushLine(line, startOfWord, i, inChord, lineObj);
+          flushLine(line, startOfWord, i, inChord, lineObj, isInline);
           inChord = false;
           startOfWord = i + 1;
         }
       }
-      flushLine(line, startOfWord, i, inChord, lineObj);
+      flushLine(line, startOfWord, i, inChord, lineObj, isInline);
       song.lines.push(lineObj);
     }
 
-    function flushLine(line, startOfWord, endOfWord, inChord, lineObj) {
+    function flushLine(line, startOfWord, endOfWord, inChord, lineObj, isInline) {
       var part = line.slice(startOfWord, endOfWord);
       if (inChord) {
         part = part + '   ';
@@ -154,12 +161,14 @@ angular.module('kimeokeApp')
       }
       part = newPart;
 
-
-      if (inChord) {
-        lineObj.push({ chord: part });
+      if (isInline) {
+        lineObj.push({ chord: part, chordClass: inChord ? 'chord' : 'lyric' });
+      }
+      else if (inChord) {
+        lineObj.push({ chord: part, chordClass: 'chord' });
       } else {
         if (lineObj.length === 0 ) {
-          lineObj.push({ chord: '' });
+          lineObj.push({ chord: '', chordClass: 'chord' });
         }
         lineObj[lineObj.length - 1].lyric = part;
       }
